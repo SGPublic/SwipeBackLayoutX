@@ -88,7 +88,7 @@ Add the dependency
 
 ```groovy
 	dependencies {
-	        implementation 'com.github.SGPublic:swipebacklayoutx:1.1.0'
+	        implementation 'com.github.SGPublic:swipebacklayoutx:1.2.0'
 	}
 ```
 
