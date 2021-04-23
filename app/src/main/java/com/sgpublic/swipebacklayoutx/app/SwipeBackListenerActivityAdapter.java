@@ -4,7 +4,7 @@ import android.app.Activity;
 
 import androidx.annotation.NonNull;
 
-import com.sgpublic.swipebacklayoutx.SwipeBackLayout;
+import com.sgpublic.swipebacklayoutx.SwipeBackLayoutX;
 import com.sgpublic.swipebacklayoutx.Utils;
 
 import java.lang.ref.WeakReference;
@@ -12,7 +12,7 @@ import java.lang.ref.WeakReference;
 /**
  * Created by laysionqet on 2018/4/24.
  */
-public class SwipeBackListenerActivityAdapter implements SwipeBackLayout.SwipeListenerEx {
+public class SwipeBackListenerActivityAdapter implements SwipeBackLayoutX.SwipeListenerEx {
     private final WeakReference<Activity> mActivity;
 
     public SwipeBackListenerActivityAdapter(@NonNull Activity activity) {

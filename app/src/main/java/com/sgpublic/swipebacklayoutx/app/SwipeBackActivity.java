@@ -2,13 +2,12 @@
 package com.sgpublic.swipebacklayoutx.app;
 
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
 import android.view.View;
 
 import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.sgpublic.swipebacklayoutx.SwipeBackLayout;
+import com.sgpublic.swipebacklayoutx.SwipeBackLayoutX;
 import com.sgpublic.swipebacklayoutx.Utils;
 
 public class SwipeBackActivity extends AppCompatActivity implements SwipeBackActivityBase {
@@ -41,7 +40,7 @@ public class SwipeBackActivity extends AppCompatActivity implements SwipeBackAct
     }
 
     @Override
-    public SwipeBackLayout getSwipeBackLayout() {
+    public SwipeBackLayoutX getSwipeBackLayout() {
         return mHelper.getSwipeBackLayout();
     }
 

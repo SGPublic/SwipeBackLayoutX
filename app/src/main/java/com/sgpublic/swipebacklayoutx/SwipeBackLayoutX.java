@@ -20,7 +20,7 @@ import com.sgpublic.swipebacklayoutx.app.SwipeBackListenerActivityAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SwipeBackLayout extends FrameLayout {
+public class SwipeBackLayoutX extends FrameLayout {
     /**
      * Minimum velocity that will be detected as a fling
      */
@@ -123,15 +123,15 @@ public class SwipeBackLayout extends FrameLayout {
      */
     private int mTrackingEdge;
 
-    public SwipeBackLayout(Context context) {
+    public SwipeBackLayoutX(Context context) {
         this(context, null);
     }
 
-    public SwipeBackLayout(Context context, AttributeSet attrs) {
+    public SwipeBackLayoutX(Context context, AttributeSet attrs) {
         this(context, attrs, R.attr.SwipeBackLayoutStyle);
     }
 
-    public SwipeBackLayout(Context context, AttributeSet attrs, int defStyle) {
+    public SwipeBackLayoutX(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs);
         mDragHelper = ViewDragHelper.create(this, new ViewDragCallback());
 

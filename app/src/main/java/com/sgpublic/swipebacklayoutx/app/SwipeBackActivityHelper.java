@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.sgpublic.swipebacklayoutx.R;
-import com.sgpublic.swipebacklayoutx.SwipeBackLayout;
+import com.sgpublic.swipebacklayoutx.SwipeBackLayoutX;
 
 /**
  * @author Yrom
@@ -15,7 +15,7 @@ import com.sgpublic.swipebacklayoutx.SwipeBackLayout;
 public class SwipeBackActivityHelper {
     private final Activity mActivity;
 
-    private SwipeBackLayout mSwipeBackLayout;
+    private SwipeBackLayoutX mSwipeBackLayout;
 
     public SwipeBackActivityHelper(Activity activity) {
         mActivity = activity;
@@ -25,7 +25,7 @@ public class SwipeBackActivityHelper {
     public void onActivityCreate() {
         mActivity.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         mActivity.getWindow().getDecorView().setBackgroundDrawable(null);
-        mSwipeBackLayout = (SwipeBackLayout) LayoutInflater.from(mActivity).inflate(R.layout.swipeback_layout, null);
+        mSwipeBackLayout = (SwipeBackLayoutX) LayoutInflater.from(mActivity).inflate(R.layout.swipeback_layout, null);
     }
 
     public void onPostCreate() {
@@ -39,7 +39,7 @@ public class SwipeBackActivityHelper {
         return null;
     }
 
-    public SwipeBackLayout getSwipeBackLayout() {
+    public SwipeBackLayoutX getSwipeBackLayout() {
         return mSwipeBackLayout;
     }
 }
