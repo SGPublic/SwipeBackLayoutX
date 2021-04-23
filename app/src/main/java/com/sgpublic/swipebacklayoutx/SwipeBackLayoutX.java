@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.ViewCompat;
 
 import com.sgpublic.swipebacklayoutx.app.SwipeBackListenerActivityAdapter;
@@ -135,20 +136,20 @@ public class SwipeBackLayoutX extends FrameLayout {
         super(context, attrs);
         mDragHelper = ViewDragHelper.create(this, new ViewDragCallback());
 
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SwipeBackLayout, defStyle,
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SwipeBackLayoutX, defStyle,
                 R.style.SwipeBackLayout);
 
-        int edgeSize = a.getDimensionPixelSize(R.styleable.SwipeBackLayout_edge_size, -1);
+        int edgeSize = a.getDimensionPixelSize(R.styleable.SwipeBackLayoutX_edge_size, -1);
         if (edgeSize > 0)
             setEdgeSize(edgeSize);
-        int mode = EDGE_FLAGS[a.getInt(R.styleable.SwipeBackLayout_edge_flag, 0)];
+        int mode = EDGE_FLAGS[a.getInt(R.styleable.SwipeBackLayoutX_edge_flag, 0)];
         setEdgeTrackingEnabled(mode);
 
-        int shadowLeft = a.getResourceId(R.styleable.SwipeBackLayout_shadow_left,
+        int shadowLeft = a.getResourceId(R.styleable.SwipeBackLayoutX_shadow_left,
                 R.drawable.shadow_left);
-        int shadowRight = a.getResourceId(R.styleable.SwipeBackLayout_shadow_right,
+        int shadowRight = a.getResourceId(R.styleable.SwipeBackLayoutX_shadow_right,
                 R.drawable.shadow_right);
-        int shadowBottom = a.getResourceId(R.styleable.SwipeBackLayout_shadow_bottom,
+        int shadowBottom = a.getResourceId(R.styleable.SwipeBackLayoutX_shadow_bottom,
                 R.drawable.shadow_bottom);
         setShadow(shadowLeft, EDGE_LEFT);
         setShadow(shadowRight, EDGE_RIGHT);
@@ -252,7 +253,7 @@ public class SwipeBackLayoutX extends FrameLayout {
     /**
      * Removes a listener from the set of listeners
      *
-     * @param listener
+     * @param listener listener
      */
     public void removeSwipeListener(SwipeListener listener) {
         if (mListeners == null) {
@@ -297,7 +298,7 @@ public class SwipeBackLayoutX extends FrameLayout {
      * Set scroll threshold, we will close the activity, when scrollPercent over
      * this value
      *
-     * @param threshold
+     * @param threshold threshold
      */
     public void setScrollThresHold(float threshold) {
         if (threshold >= 1.0f || threshold <= 0) {
@@ -336,7 +337,7 @@ public class SwipeBackLayoutX extends FrameLayout {
      * @see #EDGE_BOTTOM
      */
     public void setShadow(int resId, int edgeFlag) {
-        setShadow(getResources().getDrawable(resId), edgeFlag);
+        setShadow(ResourcesCompat.getDrawable(getResources(), resId, null), edgeFlag);
     }
 
     /**
